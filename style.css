@@ -1,8 +1,31 @@
+:root {
+  --branding-color: #97979c;
+  --default-font-family: "Poppins", sans-serif;
+}
+
+.show {
+  background-color: #d6d6db;
+  text-align: center;
+  padding: 160px 0;
+}
 h1 {
   font-size: 40px;
   color: black;
   font-weight: bold;
+  font-family: var(--default-font-family);
+}
+h2 {
+  font-family: var(--default-font-family);
+  line-height: 2;
 }
 p {
   font-weight: normal;
+  font-family: var(--default-font-family);
+  font-weight: 700;
+}
+.btn-branding {
+  font-size: 24px;
+  border-radius: 4px;
+  color: white;
+  line-height: 27px;
 }
