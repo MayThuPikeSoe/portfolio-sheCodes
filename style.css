@@ -1,31 +1,486 @@
 :root {
   --branding-color: #97979c;
   --default-font-family: "Poppins", sans-serif;
+  --second-font-family: "Ubuntu", sans-serif;
+}
+body {
+  background-color: rgb(7, 3, 6);
+  width: 100%;
+  height: 1200px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  width: 100%;
+  font-family: "Ubuntu", "sans-serif";
+  padding: 15px 70px;
+  z-index: 999;
+}
+.navbar.sticky {
+  background: crimson;
+  /* padding: 15px 70px; */
 }
 
-.show {
-  background-color: #d6d6db;
-  text-align: center;
-  padding: 160px 0;
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
 }
-h1 {
-  font-size: 40px;
-  color: black;
-  font-weight: bold;
+.logo img {
+  margin-right: 20px;
+}
+.logo-name {
   font-family: var(--default-font-family);
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(255, 0, 191);
+}
+.navbar a {
+  color: #f6f9fb;
+}
+.navbar.sticky .logo-name {
+  color: #000000;
+}
+.navbar.sticky a {
+  color: #f6f9fb;
+}
+nav ul li {
+  display: inline;
+}
+nav .nav-items {
+  padding: 0;
+  margin: 0;
+}
+.nav-items a {
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.about {
+  background: #ff35d0;
+  border-radius: 50%;
+  margin-top: 250px;
+  height: 300px;
+  position: relative;
 }
 h2 {
+  color: rgb(251, 7, 226);
+  text-align: center;
+  font-size: 20px;
+}
+.name {
+  text-align: center;
+  color: rgb(22, 21, 3);
+  font-size: 60px;
+}
+.heading {
+  width: 350px;
+  height: 300px;
+  background-color: #03ff4e;
+  margin-left: 90px;
+  margin-right: 130px;
+  padding: 0;
+  border-radius: 30px;
+  position: relative;
+  top: -100px;
+  left: 2%;
+  transform: rotate(-10deg);
+}
+.heading::before {
+  content: "";
+  border: 40px solid #ff35d0;
+  border-top-color: #03ff4e;
+  right: 60px;
+  bottom: -80px;
+  position: absolute;
+  display: inline-block;
+}
+
+.image-border {
+  width: 300px;
+  height: 300px;
+  left: 15%;
+  background: url(images/pink.jpg) no-repeat;
+  background-position: center;
+  background-color: #ffff00;
+  background-size: contain;
+  border-radius: 30px;
+  position: absolute;
+  top: -100px;
+  left: 60%;
+  transform: rotate(10deg);
+}
+
+.about-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  top: 150px;
+  left: 48%;
+  animation: zoom-in 1s ease-in infinite;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(1.5, 1.5);
+  }
+  50% {
+    transform: scale(2, 2);
+  }
+  100% {
+    transform: scale(1.5, 1.5);
+  }
+}
+.project {
+  margin-top: 90px;
+  padding: 0;
+}
+.project-lists {
+  display: none;
+}
+.may-projects {
+  display: none;
+}
+.may-btn {
+  margin-left: 20px;
+}
+.shecode-btn {
+  transition: 0.5s;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: #ff0392;
+  border: none;
+}
+.may-btn {
+  transition: 0.5s;
+  color: rgb(0, 0, 0);
+  background: #03ff4e;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.shecode-btn:hover {
+  color: #f6f3f3;
+  background-color: rgb(108, 131, 131);
+}
+.may-btn:hover {
+  color: #f8f8fd;
+}
+.project-item {
+  margin: 0;
+}
+
+.project-title {
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 40px;
   font-family: var(--default-font-family);
-  line-height: 2;
+}
+.shecodes-project-title,
+.may-project-title {
+  text-align: center;
+  color: #ff03e6;
+  padding-bottom: 30px;
+}
+.project-img {
+  width: 500px;
+  height: 400px;
+  border-radius: 30px;
+}
+
+.project-name {
+  text-align: center;
+  padding-top: 40px;
+  color: rgb(239, 7, 96);
+  font-family: var(--second-font-family);
 }
 p {
-  font-weight: normal;
-  font-family: var(--default-font-family);
-  font-weight: 700;
-}
-.btn-branding {
-  font-size: 24px;
-  border-radius: 4px;
+  line-height: 30px;
   color: white;
-  line-height: 27px;
+  font-size: 18px;
+  text-align: justify;
+}
+.project-btn {
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+  height: 40px;
+}
+.fashion-item,
+.portfolio-item {
+  border-radius: 30px;
+}
+.fashion-item .fashion-img,
+.portfolio-item .portfolio-img {
+  width: 500px;
+  height: 350px;
+}
+.fashion-title {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.fashion-btn,
+.portfolio-btn {
+  display: block;
+  margin: 120px auto;
+  width: 100px;
+  height: 40px;
+  background-color: #ff35d0;
+  border: none;
+}
+
+/* skills Styling */
+.skills {
+  font-family: var(--default-font-family);
+  background-color: #000000;
+  height: 600px;
+}
+.skills .skills-content {
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .title {
+  padding: 50px 0;
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: var(--second-font-family);
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  overflow-y: hidden;
+}
+.skills .title::before {
+  position: absolute;
+  content: " ";
+  width: 150px;
+  height: 3px;
+  background-color: white;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skills .title::after {
+  position: absolute;
+  content: "what i know ";
+  color: crimson;
+  background: black;
+  bottom: -8px;
+  left: 50%;
+  padding: 7px;
+  font-size: 13px;
+  transform: translateX(-50%);
+}
+.skills-content {
+  /* width: calc(50% - 30px); */
+  display: flex;
+}
+
+.skills .skills-content .left .text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: white;
+}
+.skills .skills-content .left .text span {
+  color: #07f0f8;
+}
+.skills .left {
+  width: 45%;
+}
+.skills .right {
+  margin-top: 70px;
+  width: 45%;
+}
+.skills .skills-content .right .bars {
+  margin-bottom: 20px;
+}
+.skills .skills-content .right .info {
+  color: white;
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .right .line {
+  height: 10px;
+  width: 100%;
+  background-color: lightgrey;
+  position: relative;
+}
+.skills .skills-content .right .line::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: crimson;
+}
+.skills .skills-content .right .html::before {
+  width: 90%;
+  animation: html 2s;
+}
+.skills .skills-content .right .css::before {
+  width: 70%;
+}
+.skills .skills-content .right .js::before {
+  width: 60%;
+}
+.skills .skills-content .right .java::before {
+  width: 50%;
+}
+.skills .skills-content .right .react::before {
+  width: 40%;
+}
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.contact {
+  background-color: black;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  padding-top: 80px;
+  position: relative;
+}
+.contact .max-width {
+  margin: 0 50px;
+}
+.contact .max-width::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(45deg, #083f41, rgb(32, 7, 61));
+  border-radius: 0 0 100% 100%/0 0 40% 40%;
+}
+.contact .contact-content {
+  display: flex;
+  width: 100%;
+}
+.contact .left {
+  width: 50%;
+  animation: bounceInLeft;
+  animation-duration: 2s;
+}
+.contact .title {
+  position: relative;
+  color: white;
+  text-align: center;
+  font-family: var(--second-font-family);
+  font-weight: 500;
+  font-size: 40px;
+}
+.contact .title::before {
+  position: absolute;
+  content: " ";
+  width: 170px;
+  height: 4px;
+  background-color: crimson;
+  bottom: 0;
+  left: 41%;
+  /* transform: translateX(-50%); */
+}
+.icon {
+  width: 45px;
+  height: 40px;
+  padding-top: 5px;
+  text-align: center;
+  color: crimson;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 20px;
+}
+.box {
+  display: flex;
+}
+
+.text h1 {
+  color: crimson;
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+.text p {
+  color: white;
+  padding-left: 20px;
+}
+.contact .left {
+  margin: 70px 0;
+  position: relative;
+}
+.contact .right {
+  margin: 70px 0;
+  padding-left: 70px;
+  animation-name: bounceInRight;
+  animation-duration: 2s;
+}
+
+/* form */
+form {
+  background-color: rgb(235, 223, 223);
+  position: relative;
+  height: 350px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+form .box {
+  position: absolute;
+  opacity: 0.5;
+  height: 350px;
+}
+#textId {
+  width: 300px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 30px;
+  border: none;
+  outline: none;
+  background-color: rgb(222, 221, 221);
+  border-bottom: 1px solid rgb(170, 167, 167);
+}
+#message {
+  margin: 20px 30px;
+  width: 300px;
+  height: 30px;
+  padding-right: 0px;
+  border: none;
+  outline: none;
+  background-color: rgb(222, 221, 221);
+  border-bottom: 1px solid rgb(107, 106, 106);
+  overflow: hidden;
+  color: white;
+}
+form h1 {
+  color: crimson;
+  font-size: 30px;
+  padding: 50px 0 0 30px;
+}
+form #sendbtn {
+  margin-top: 20px;
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  margin-left: 140px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #0162c8, #55e7fc);
 }
