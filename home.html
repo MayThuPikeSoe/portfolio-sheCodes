@@ -7,10 +7,8 @@
     <title>Portfolio</title>
     <link rel="Shortcut icon" href="/images/heading.jpg" type="image/jpg" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -34,53 +32,69 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
     <script
-      src="https://kit.fontawesome.com/ddc3ee268a.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <!-- <script
+      src="https://kit.fontawesome.com/ddc3ee268a.js"
+      crossorigin="anonymous"
+    ></script> -->
   </head>
   <body>
-    <nav
-      class="navbar-expand-lg d-flex justify-content-between navbar px-5 fixed-top"
-    >
-    
-        <div class="logo d-flex">
+    <div class="fixed-top overflow-hidden">
+      <nav class="navbar navbar-expand-lg pt-2 px-5">
+        <div class="logo d-flex w-50">
           <img src="images/may.jpg" alt="" class="logo-img" />
           <h1 class="logo-name">May</h1>
         </div>
+        <button
+          class="navbar-toggler toggle-btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse heading-link" id="navbarNav">
+          <ul class="navbar-nav nav-heading-link">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
-        <ul class="nav-items">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <!-- <div class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </div> -->
-      </div>
-    </nav>
-
-    <div class="container" id="about">
-      <!-- <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTC1pRMUaiQn_0Uv813BmztOo_Xx6yfD3YXA&usqp=CAU"
-        alt=""
-        class="about-image"
-      /> -->
+    <div class="container overflow-hidden">
       <img
         class="about-image"
         src="data:image/png;base64,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"
         alt=""
       />
-      <div class="about row">
-        <div class="heading p-5 animate__animated animate__zoomInDown col-md-6">
+      <div class="about row" id="about">
+        <div class="col-md-6 heading p-5 animate__animated animate__zoomInDown">
           <h2 class="">Hi, I'm</h2>
           <span class="name typing">May Thu</span>
           <h2>front-end Web Developer based in Myanmar</h2>
         </div>
         <div
-          class="image-border p-0 animate__animated animate__zoomInRight col-md-6"
+          class="col-md-6 image-border p-0 animate__animated animate__zoomInRight"
         >
           <div class=""></div>
         </div>
@@ -93,8 +107,10 @@
         >
           Projects
         </h1>
-        <button class="btn btn-primary shecode-btn">sheCodes projects</button>
-        <button class="btn btn-primary may-btn">May projects</button>
+        <div class="d-flex justify-content-center mb-5">
+          <button class="btn btn-primary shecode-btn">sheCodes projects</button>
+          <button class="btn btn-primary may-btn">May projects</button>
+        </div>
 
         <div class="project-lists shecodes-projects">
           <h3 class="animate__animated animate__zoomIn shecodes-project-title">
@@ -118,7 +134,12 @@
                 flavored cream base and liquid nitrogen together. Food coloring
                 is sometimes added, in addition to stabilizers.
               </p>
-              <a href="#" class="btn btn-primary project-btn"> project</a>
+              <a
+                href="https://eloquent-tulumba-702427.netlify.app/"
+                class="btn btn-primary project-btn"
+              >
+                project</a
+              >
             </div>
           </div>
           <div class="project-item row my-5">
@@ -133,7 +154,12 @@
                 time. When used without qualification, "weather" is generally
                 understood to mean the weather of Earth.
               </p>
-              <a href="#" class="btn btn-primary project-btn"> project</a>
+              <a
+                href="https://vanilla-weather-app-week8.netlify.app/"
+                class="btn btn-primary project-btn"
+              >
+                project</a
+              >
             </div>
             <div
               class="col-md-6 p-0 weather-image animate__animated animate__bounceInRight"
@@ -158,7 +184,12 @@
                 flavored cream base and liquid nitrogen together. Food coloring
                 is sometimes added, in addition to stabilizers.
               </p>
-              <a href="#" class="btn btn-primary project-btn"> project</a>
+              <a
+                href="https://eloquent-tulumba-702427.netlify.app/"
+                class="btn btn-primary project-btn"
+              >
+                project</a
+              >
             </div>
           </div>
         </div>
@@ -198,7 +229,7 @@
       </div>
       <!-- skills -->
       <section class="skills" id="skills">
-        <div class="max-width">
+        <div class=" ">
           <h2 class="title">My Skills</h2>
           <div class="skills-content">
             <div class="column left skills-box">
