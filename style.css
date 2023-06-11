@@ -386,6 +386,9 @@ p {
   animation: bounceInLeft;
   animation-duration: 2s;
 }
+.contact .right {
+  width: 50%;
+}
 .contact .title {
   position: relative;
   color: white;
@@ -490,4 +493,7 @@ form #sendbtn {
   border: none;
   border-radius: 30px;
   background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+.git-hub-link {
+  color: #fffeff;
 }

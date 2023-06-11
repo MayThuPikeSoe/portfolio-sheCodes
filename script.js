@@ -19,7 +19,6 @@ const sr = ScrollReveal({
   reset: true,
 });
 sr.reveal(".skills-box", { delay: 200 });
-sr.revel(".left", { delay: 200 });
 
 const sr1 = ScrollReveal({
   origin: "right",
@@ -28,7 +27,6 @@ const sr1 = ScrollReveal({
   reset: true,
 });
 sr1.reveal(".skills-box1", { delay: 200 });
-sr1.revel(".right", { delay: 200 });
 
 shecodeBtn.addEventListener("click", () => {
   projectLists.style.display = "block";
